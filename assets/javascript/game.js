@@ -24,3 +24,22 @@ var lossTotal = 0;
 // Code for onStart
 $("#winTotal").text(winTotal);
 $("#lossTotal").text(lossTotal);
+$("#targetNumber").text(targetNumber);
+
+var targetNumberOptions = [40, 50, 60];
+
+var crystalOne = {
+  crOneOptions: [1, 2, 3];
+}
+
+var crystalTwo = {
+  crTwoOptions: [4, 5, 6];
+}
+
+var crystalThree = {
+  crThreeOptions: [7, 8, 9];
+}
+
+var crystalFour = {
+  crFourOptions: [10, 11, 12];
+}
