@@ -18,18 +18,15 @@
 
 $(document).ready(function() {
 // Variables realted to scores and other 'starting' info
-  var targetNumber = "";
   var winTotal = 0;
   var lossTotal = 0;
   var counter = 0;
 
-// Code for onStart
-  $("#winTotal").text(winTotal);
-  $("#lossTotal").text(lossTotal);
-  $("#targetNumber").text(targetNumber);
-
 // Random Number Options
   var targetNumberOptions = [40, 50, 60];
+  var targetNumber = targetNumberOptions[Math.floor(Math.random() * targetNumberOptions.length)];
+  console.log(targetNumber);
+
 
   var crysOneOptions = [1, 2, 3];
   var crysOneValue = crysOneOptions[Math.floor(Math.random() * crysOneOptions.length)];
@@ -47,5 +44,10 @@ $(document).ready(function() {
   var crysFourOptions = [10, 11, 12];
   var crysFourValue = crysFourOptions[Math.floor(Math.random() * crysFourOptions.length)];
   console.log(crysFourValue);
+
+  // Code for onStart
+  $("#winTotal").text(winTotal);
+  $("#lossTotal").text(lossTotal);
+  $("#targetNumber").text(targetNumber);
 
 });
