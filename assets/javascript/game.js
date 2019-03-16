@@ -17,21 +17,19 @@
 // q: how to do bootstrap-js
 
 $(document).ready(function() {
-// Variables realted to scores and other 'starting' info
+// Variables related to scores and misc global data
   var winTotal = 0;
   var lossTotal = 0;
-  var counter = 0;
+  var counter = 0; //for calculating how much youve hit so far
 
-// Random Number Options
+// Random Number Options/Generation
   var targetNumberOptions = [40, 50, 60];
   var targetNumber = targetNumberOptions[Math.floor(Math.random() * targetNumberOptions.length)];
   console.log(targetNumber);
 
-
   var crysOneOptions = [1, 2, 3];
   var crysOneValue = crysOneOptions[Math.floor(Math.random() * crysOneOptions.length)];
   console.log(crysOneValue);
-
 
   var crysTwoOptions = [4, 5, 6];
   var crysTwoValue = crysTwoOptions[Math.floor(Math.random() * crysTwoOptions.length)];
@@ -45,9 +43,17 @@ $(document).ready(function() {
   var crysFourValue = crysFourOptions[Math.floor(Math.random() * crysFourOptions.length)];
   console.log(crysFourValue);
 
-  // Code for onStart
+// Code for onStart
   $("#winTotal").text(winTotal);
   $("#lossTotal").text(lossTotal);
   $("#targetNumber").text(targetNumber);
+
+//Code for Value Assignment
+  $("#targetNumber").attr("data-targetNumber", targetNumber)
+  $("#crystalOne").attr("data-crysOneValue", crysOneValue);
+  $("#crystalTwo").attr("data-crysTwoValue", crysTwoValue);
+  $("#crystalThree").attr("data-crysThreeValue", crysThreeValue);
+  $("#crystalFour").attr("data-crysFourValue", crysFourValue);
+
 
 });
