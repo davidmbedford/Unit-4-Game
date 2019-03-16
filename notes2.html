@@ -14,6 +14,7 @@
 <body>
 
   <h1>Number to Guess: <span id="number-to-guess"></span></h1>
+  <h1>Your Score: <span id="your-score"></span></h1>
 
   <!-- Note that this div is now empty. We will fill it dynamically -->
   <div id="crystals">
@@ -27,6 +28,7 @@
   var targetNumber = 53;
   $("#number-to-guess").text(targetNumber);
   var counter = 0;
+  $("#your-score").append(counter);
   // Now for the hard part. Creating multiple crystals each with their own unique number value.
   // We begin by expanding our array to include four options.
   var numberOptions = [10, 5, 3, 7];
