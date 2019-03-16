@@ -16,30 +16,54 @@
 // questions: how to properly link jquery
 // q: how to do bootstrap-js
 
+$(document).ready(function() {
 // Variables realted to scores and other 'starting' info
-var targetNumber = "";
-var winTotal = 0;
-var lossTotal = 0;
+  var targetNumber = "";
+  var winTotal = 0;
+  var lossTotal = 0;
+  var counter = 0;
 
 // Code for onStart
-$("#winTotal").text(winTotal);
-$("#lossTotal").text(lossTotal);
-$("#targetNumber").text(targetNumber);
+  $("#winTotal").text(winTotal);
+  $("#lossTotal").text(lossTotal);
+  $("#targetNumber").text(targetNumber);
 
-var targetNumberOptions = [40, 50, 60];
+// Random Number Options
+  var targetNumberOptions = [40, 50, 60];
 
-var crystalOne = {
-  crOneOptions: [1, 2, 3];
-}
+  var crystalOne = {
+    options: [1, 2, 3];
+  }
 
-var crystalTwo = {
-  crTwoOptions: [4, 5, 6];
-}
+  var crystalTwo = {
+    options: [4, 5, 6];
+  }
 
-var crystalThree = {
-  crThreeOptions: [7, 8, 9];
-}
+  var crystalThree = {
+    options: [7, 8, 9];
+  }
 
-var crystalFour = {
-  crFourOptions: [10, 11, 12];
-}
+  var crystalFour = {
+    options: [10, 11, 12];
+  }
+
+  $(".crystal-image").on("click", function() {
+    var crystalValue = ($(this).attr(""));
+    crystalValue = parseInt(crystalValue);
+
+    counter += crystalOne[i];
+
+    if (counter === targetNumber) {
+      alert("You win!");
+    }
+    else if (counter >= targetNumber) {
+      alert("You lose!!");
+    }
+
+
+
+  };
+
+
+
+});
