@@ -20,13 +20,10 @@
 }
 
 #i1,
-#i3 {
-  background-color: blanchedalmond;
-}
-
 #i2,
+#i3,
 #i4 {
-  background-color: aliceblue;
+  border: 1px solid black;
 }
 
 #score1 {
@@ -35,4 +32,9 @@
 
 #score2 {
   background-color: bisque;
+}
+
+.crystal-image {
+  width: 200px;
+  height: 200px;
 }
