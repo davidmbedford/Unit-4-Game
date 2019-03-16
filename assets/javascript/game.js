@@ -15,3 +15,12 @@
 
 // questions: how to properly link jquery
 // q: how to do bootstrap-js
+
+// Variables realted to scores and other 'starting' info
+var targetNumber = "";
+var winTotal = 0;
+var lossTotal = 0;
+
+// Code for onStart
+$("#winTotal").text(winTotal);
+$("#lossTotal").text(lossTotal);
