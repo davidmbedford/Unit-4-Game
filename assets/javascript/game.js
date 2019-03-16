@@ -31,39 +31,21 @@ $(document).ready(function() {
 // Random Number Options
   var targetNumberOptions = [40, 50, 60];
 
-  var crystalOne = {
-    options: [1, 2, 3];
-  }
-
-  var crystalTwo = {
-    options: [4, 5, 6];
-  }
-
-  var crystalThree = {
-    options: [7, 8, 9];
-  }
-
-  var crystalFour = {
-    options: [10, 11, 12];
-  }
-
-  $(".crystal-image").on("click", function() {
-    var crystalValue = ($(this).attr(""));
-    crystalValue = parseInt(crystalValue);
-
-    counter += crystalOne[i];
-
-    if (counter === targetNumber) {
-      alert("You win!");
-    }
-    else if (counter >= targetNumber) {
-      alert("You lose!!");
-    }
+  var crysOneOptions = [1, 2, 3];
+  var crysOneValue = crysOneOptions[Math.floor(Math.random() * crysOneOptions.length)];
+  console.log(crysOneValue);
 
 
+  var crysTwoOptions = [4, 5, 6];
+  var crysTwoValue = crysTwoOptions[Math.floor(Math.random() * crysTwoOptions.length)];
+  console.log(crysTwoValue);
 
-  };
+  var crysThreeOptions = [7, 8, 9];
+  var crysThreeValue = crysThreeOptions[Math.floor(Math.random() * crysThreeOptions.length)];
+  console.log(crysThreeValue);
 
-
+  var crysFourOptions = [10, 11, 12];
+  var crysFourValue = crysFourOptions[Math.floor(Math.random() * crysFourOptions.length)];
+  console.log(crysFourValue);
 
 });
