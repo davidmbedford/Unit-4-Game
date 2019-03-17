@@ -48,12 +48,24 @@ $(document).ready(function() {
 
       if (scoreCounter === targetNumber) {
         alert("HELL YEAH");
+        winTotal++;
+        $("#winTotal").text(winTotal);
+        reset();
       }
       else if (scoreCounter >= targetNumber) {
         alert("Woah! Back it up, bud");
+        lossTotal++;
+        $("#lossTotal").text(lossTotal);
+        reset();
       }
 
     });
+
+  var reset = function() {
+    scoreCounter = 0;
+
+
+  }
 
 });
 
