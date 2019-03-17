@@ -3,40 +3,46 @@ $(document).ready(function() {
   var winTotal = 0;
   var lossTotal = 0;
   scoreCounter = 0; //for calculating how much youve hit so far
-  console.log(scoreCounter);
+  console.log("Score", scoreCounter);
+  var targetNumber = "";
 
 // Random Number Options/Generation
-  var targetNumberOptions = [40, 50, 60];
-  var targetNumber = targetNumberOptions[Math.floor(Math.random() * targetNumberOptions.length)];
-  console.log("tar", targetNumber);
+var setNumbers = function () {
+  var targetNumberOptions = [50, 60, 70, 85, 100];
+  targetNumber = targetNumberOptions[Math.floor(Math.random() * targetNumberOptions.length)];
+  $("#targetNumber").text(targetNumber);
+  console.log("target", targetNumber);
 
-  var crysOneOptions = [1, 2, 3];
+  var crysOneOptions = [1, 2, 3, 4, 5];
   var crysOneValue = crysOneOptions[Math.floor(Math.random() * crysOneOptions.length)];
   console.log(crysOneValue);
 
-  var crysTwoOptions = [4, 5, 6];
+  var crysTwoOptions = [6, 7, 8, 9 , 10];
   var crysTwoValue = crysTwoOptions[Math.floor(Math.random() * crysTwoOptions.length)];
   console.log(crysTwoValue);
 
-  var crysThreeOptions = [7, 8, 9];
+  var crysThreeOptions = [11, 12, 13, 14, 15];
   var crysThreeValue = crysThreeOptions[Math.floor(Math.random() * crysThreeOptions.length)];
   console.log(crysThreeValue);
 
-  var crysFourOptions = [10, 11, 12];
+  var crysFourOptions = [16, 17, 18, 19, 20];
   var crysFourValue = crysFourOptions[Math.floor(Math.random() * crysFourOptions.length)];
   console.log(crysFourValue);
-
-// Code for onStart
-  $("#winTotal").text(winTotal);
-  $("#lossTotal").text(lossTotal);
-  $("#targetNumber").text(targetNumber);
-
-//Code for Value Assignment
+  //Code for Value Assignment
   $("#targetNumber").attr("data-targetNumber", targetNumber)
   $("#crystalOne").attr("data-crysValue", crysOneValue);
   $("#crystalTwo").attr("data-crysValue", crysTwoValue);
   $("#crystalThree").attr("data-crysValue", crysThreeValue);
   $("#crystalFour").attr("data-crysValue", crysFourValue);
+
+};
+
+// Code for onStart
+setNumbers();
+
+
+$("#winTotal").text(winTotal);
+$("#lossTotal").text(lossTotal);
 
 // On.Click functions for the crystal images
   $(".crystal-image").on("click", function() {
@@ -63,8 +69,7 @@ $(document).ready(function() {
 
   var reset = function() {
     scoreCounter = 0;
-
-
+    setNumbers();
   }
 
 });
