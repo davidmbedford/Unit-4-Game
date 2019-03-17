@@ -46,6 +46,13 @@ $(document).ready(function() {
       $("#scoreCounter").text(scoreCounter);
       console.log(scoreCounter);
 
+      if (scoreCounter === targetNumber) {
+        alert("HELL YEAH");
+      }
+      else if (scoreCounter >= targetNumber) {
+        alert("Woah! Back it up, bud");
+      }
+
     });
 
 });
